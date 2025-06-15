@@ -43,7 +43,7 @@ jobs:
         with:
           service-id: ${{ secrets.MY_RENDER_BE_SERVICE_ID }}
           api-key: ${{ secrets.MY_RENDER_API_KEY }}
-          wait-for-success: true
+          wait_deploy: true
   
   deploy-fe:
     if: github.ref == 'refs/heads/main'
@@ -55,4 +55,4 @@ jobs:
         with:
           service-id: ${{ secrets.MY_RENDER_FE_SERVICE_ID }}
           api-key: ${{ secrets.MY_RENDER_API_KEY }}
-          wait-for-success: true
+          wait_deploy: true
